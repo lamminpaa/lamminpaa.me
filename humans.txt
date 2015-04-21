@@ -1,0 +1,11 @@
+/* TEAM */
+Your title: Kalle Lamminpää
+Site: lamminpaa.me
+Twitter: kallelam 
+Location: Helsinki, Finland
+
+/* SITE */                 
+Last update: 2015/04/21
+Standards: HTML5, CSS3  
+Components: Modernizr, jQuery, Nginx     
+Software: Sublime text
