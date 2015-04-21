@@ -134,7 +134,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 $.getJSON( "/randomfact/ipinfo.php", function( data ) {
     var random = Math.random();
 
-      $("#randomfact").text("You are browsing this site from "+data.city.names['en']+".");
+      $("#randomfact").text("You are browsing this site from "+data.country.names['en']+".");
     
 });
  
