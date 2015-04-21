@@ -139,7 +139,7 @@ if(random < 0.5) {
 }
 if(random > 0.5) {
     ping("https://lamminpaa.me").then(function(delta) {
-            $("#randomfact").text("Your latency to this site is "+delta);
+            $("#randomfact").text("Your latency to this site is "+delta+"ms");
         }).catch(function(error) {
             alert(String(error));
         });
