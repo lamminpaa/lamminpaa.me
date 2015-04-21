@@ -128,6 +128,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="/js/ping.js"></script>
     <script type="text/javascript">
  
 var random = Math.random();
@@ -137,24 +138,13 @@ if(random < 0.5) {
     });
 }
 if(random > 0.5) {
-    $.ajax({
-        beforeSend: function(){
-            // right before firing off the request, create a global object that includes the request send time
-            window.startTime = new Date();
-        },
-        
-        // send the request to the root URI of this host
-        url: '/',
-        
-        success: function(){
-            // once the request comes back, record the end time
-            window.endTime = new Date();
-            
-            // take the difference, which will yield a number in milliseconds, and print it out
-            $("#randomfact").text("Your latency to our server is "+ (window.endTime - window.startTime + " ms"));
-        }
-    })
+    ping("https://lamminpaa.me").then(function(delta) {
+            $("#randomfact").text("Your latency to this site is "+delta);
+        }).catch(function(error) {
+            alert(String(error));
+        });
 }
+
 
 
  
