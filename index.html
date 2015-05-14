@@ -97,8 +97,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         </ul>
                     </div>
                     <div class="footer-col col-md-3">
-                        <h3>About You</h3>
-                        <p id="randomfact"></p>
+                        <h3>About</h3>
+                        <p>I'm a professional with</p>
                     </div>
                 </div>
             </div>
@@ -131,29 +131,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Bootstrap Core JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="/js/ping.js"></script>
-    <script type="text/javascript">
- 
-var random = Math.random();
-if(random < 0.5) {
-    $.getJSON( "/randomfact/ipinfo.php", function( data ) {
-      $("#randomfact").text("You are browsing this site from "+data.country.names['en']+".");
-    });
-}
-if(random > 0.5) {
-    ping("https://lamminpaa.me").then(function(delta) {
-            $("#randomfact").text("Your latency to this site is "+delta+" ms");
-        }).catch(function(error) {
-            alert(String(error));
-        });
-}
-
-
-
- 
-</script>
 </body>
 
 </html>
